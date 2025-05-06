@@ -8,97 +8,93 @@
 <body>
     <h1>Tandartsafspraak</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ante urna, congue vel condimentum sed, lobortis at mauris. Ut vehicula quam quis nunc rhoncus aliquam. Ut quam mi, viverra in aliquet a, ultricies tincidunt velit. Nunc eu arcu eros. Aliquam erat volutpat. Vivamus ut elit mi. Sed congue viverra malesuada. Nullam euismod, odio ac lacinia rutrum, massa sem feugiat sem, vel facilisis ipsum dui id tellus. Pellentesque malesuada lacinia ipsum ac ultricies. Praesent at ligula laoreet, vulputate nisi vel, tincidunt est. Phasellus quis ex at purus scelerisque convallis sed quis dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin dignissim pharetra commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-    <img src="img/20180516_111027.jpg" width="300px" height="auto">
-    <img src="img/DC-Amersfoort-23-05-2023-02.webp" width="300px" height="auto">
-    <img src="img/Meander-Amersfoort.jpg" width="300px" height="auto">
+    <img alt="Tandarts en patiënt" src="img/20180516_111027.jpg" width="300" height="225">
+    <img alt="Tandartsassistente" src="img/DC-Amersfoort-23-05-2023-02.webp" width="300" height="200">
+    <img alt="Meander medisch centrum" src="img/Meander-Amersfoort.jpg" width="300" height="169">
     
     <h1>Maak een afspraak</h1>
     <form method="post" action="https://formspree.io/f/mjkwkngk">
-        <fieldset><legend>Persoonlijke gegevens
-        </legend>
-            <table width="800" border="0">
-            <tbody>
-            <tr>
-                <td><b><label for="naam">Uw naam</label></b></td>
-                <td><input type="text" name="naam"></td>
-            </tr>
-            <tr>
-                <td><b><label for="adres">Uw adres</label></b></td>
-                <td><input type="text" name="adres"></td>
-            </tr>
-            <tr>
-                <td><b><label for="leeftijd">Uw leeftijd</label></b></td>
-                <td><input type="number" name="leeftijd" min="1" max="100"></td>
-            </tr>
-            <tr>
-                <td><b><label for="email">Uw e-mailadres</label></b></td>
-                <td><input type="email" name="emailadres"></td>
-            </tr>
-            <tr>
-                <td><b><label for="telefoonnummer">Uw telefoonnummer</label></b></td>
-                <td><input type="tel" name="telefoonnummer"></td>
-            </tr>
-            <tr>
-                <td><b><label for="geboortedatum">Uw geboortedatum</label></b></td>
-                <td><input type="date" name="datum" max="2080-12-31"></td>
-            </tr>
-            <tr>
-                <td><b><label for="geslacht">Uw geslacht</label></b></td>
-                <td>
-                    <input type="radio" name="geslacht" value="man" checked>Man
-                    <input type="radio" name="geslacht" value="vrouw">Vrouw
-                    <input type="radio" name="geslacht" value="anders">Anders
-                </td>
-            </tr>
-            </tbody></table>
+        <fieldset>
+            <legend>Persoonlijke gegevens</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><b><label for="naam">Uw naam</label></b></td>
+                        <td><input type="text" name="naam" id="naam"></td>
+                    </tr>
+                    <tr>
+                        <td><b><label for="adres">Uw adres</label></b></td>
+                        <td><input type="text" name="adres" id="adres"></td>
+                    </tr>
+                    <tr>
+                        <td><b><label for="leeftijd">Uw leeftijd</label></b></td>
+                        <td><input type="number" name="leeftijd" id="leeftijd" min="1" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td><b><label for="email">Uw e-mailadres</label></b></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><b><label for="telefoonnummer">Uw telefoonnummer</label></b></td>
+                        <td><input type="tel" name="telefoonnummer" id="telefoonnummer"></td>
+                    </tr>
+                    <tr>
+                        <td><b><label for="geboortedatum">Uw geboortedatum</label></b></td>
+                        <td><input type="date" name="geboortedatum" id="geboortedatum" max="2080-12-31"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Uw geslacht</b></td>
+                        <td>
+                            <label for="gender-man"><input type="radio" id="gender-man" value="man" name="man" checked>Man</label>
+                            <label for="gender-vrouw"><input type="radio" id="gender-vrouw" value="vrouw" name="vrouw">Vrouw</label>
+                            <label for="gender-anders"><input type="radio" id="gender-anders" value="anders" name="anders">Anders</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </fieldset>
 
-        <fieldset><legend>Beschrijving van de klachten
-        </legend>
-        <table width="800" border="0">
-        <tbody>
-            <tr>
-                <td><b><label for="klachten"> Selecteer minimaal een van de onderstaande klachten </label></b></td>
-                <td>
-                    <input type="checkbox" name="klachten" value="Hoofdklachten">Hoofdklachten
-                    <input type="checkbox" name="klachten" value="Rugklachten">Rugklachten
-                    <input type="checkbox" name="klachten" value="Spierpijn">Spierpijn
-                    <input type="checkbox" name="klachten" value="Voetpijn">Voetpijn
-                    <input type="checkbox" name="klachten" value="Anders">Anders
-                </td>
-            </tr>
-            <tr>
-                <td><b><label for="foto">Selecteer uw foto</label></b></td>
-                <td><input type="file" name="foto"></td>
-            </tr>
-        </tbody>
-        </table>
+        <fieldset>
+            <legend>Beschrijving van de klachten</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><b>Selecteer minimaal een van de onderstaande klachten</b></td>
+                        <td>
+                            <input type="checkbox" id="hoofdklachten" value="Hoofdklachten" name="hoofdklachten"><label for="hoofdklachten">Hoofdklachten</label>
+                            <input type="checkbox" id="rugklachten" value="Rugklachten" name="rugklachten"><label for="rugklachten">Rugklachten</label>
+                            <input type="checkbox" id="spierpijn" value="Spierpijn" name="spierpijn"><label for="spierpijn">Spierpijn</label>
+                            <input type="checkbox" id="voetpijn" value="Voetpijn" name="voetpijn"><label for="voetpijn">Voetpijn</label>
+                            <input type="checkbox" id="anders" value="Anders" name="anders"><label for="anders">Anders</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b><label for="foto">Selecteer uw foto</label></b></td>
+                        <td><input type="file" id="foto" name="foto"></td>
+                    </tr>
+                </tbody>
+            </table>
         </fieldset>
 
-        <fieldset><legend>Toelichting van de klachten
-        </legend>
-        <table width="800" border="0">
-        <tbody>
-            <tr>
-            <td><b><label for="toelichting"> Beschrijf de klachten zo goed mogelijk </label></b></td>
-            <td><textarea name="toelichting" maxlength ="1500">
-                </textarea>
-            </td>
-            </tr>
-            <tr>
-                <td><b><label for="afspraakdatum">Selecteer een datum voor afspraak</label></b></td>
-                <td><input type="date" name="afspraakdatum" max="2025-12-31"></td>
-            </tr>
-        </tbody>
-        </table>
+        <fieldset>
+            <legend>Toelichting van de klachten</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><b><label for="toelichting"> Beschrijf de klachten zo goed mogelijk </label></b></td>
+                        <td><textarea name="toelichting" id="toelichting" maxlength ="1500"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><b><label for="afspraakdatum">Selecteer een datum voor afspraak</label></b></td>
+                        <td><input name="afspraakdatum" type="date" id="afspraakdatum" max="2025-12-31"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><button type="submit" name="verzendknop"><strong>Verzend</strong></button></td>
+                    </tr>
+                </tbody>
+            </table>
         </fieldset>
-        <tr>
-            <td>&nbsp;</td>
-            <td><button type="submit" name="verzendknop">
-            <strong>Verzend</strong></button></td>
-        </tr>
-        </tbody>
-        </table>
     </form>
 </body>
 </html>
